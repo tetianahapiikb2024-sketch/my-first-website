@@ -1,0 +1,79 @@
+/* Змінні для кольорів */
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #1c1e21;
+    --accent-color: #0056b3;
+    --strong-color: #d9534f;
+}
+
+/* Стилі для ТЕМНОЇ ТЕМИ */
+body.dark {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --accent-color: #4facfe;
+    --strong-color: #ff6b6b;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0; padding: 20px;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* FLEXBOX для фото та тексту */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 15px;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    object-fit: cover;
+}
+
+h1 { color: var(--accent-color); text-transform: uppercase; margin: 0; }
+h2 { color: #ffffff; background-color: var(--accent-color); padding: 8px 15px; border-radius: 4px; margin-top: 25px; }
+strong { color: var(--strong-color); }
+
+/* Кнопки */
+button {
+    background: var(--accent-color);
+    color: white; border: none; padding: 10px 20px;
+    border-radius: 5px; cursor: pointer;
+}
+
+/* Модальне вікно */
+.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); }
+.modal-content { background: var(--card-bg); margin: 15% auto; padding: 25px; width: 300px; border-radius: 10px; text-align: center; }
+.close { float: right; cursor: pointer; font-size: 28px; }
+
+/* Блок localStorage у футері */
+.storage-box { margin-top: 15px; padding: 10px; border: 1px dashed var(--accent-color); font-size: 0.8em; }
+
+/* Адаптивність для телефонів */
+@media (max-width: 600px) {
+    .profile-header { flex-direction: column; text-align: center; }
+    .container { padding: 15px; }
+}

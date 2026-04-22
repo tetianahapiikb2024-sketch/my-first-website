@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме | Гапій Тетяна</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div style="text-align: right; margin-bottom: 10px;">
+        <button id="toggle-theme">Змінити тему</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="profile-header">
+                <img src="photo.jpg" alt="Гапій Тетяна" class="profile-img" id="main-photo">
+                
+                <div class="profile-text">
+                    <h1>Гапій Тетяна Степанівна</h1>
+                    <div class="contact-box">
+                        <p><strong>Локація:</strong> м. Львів, Україна</p>
+                        <p><strong>Телефон:</strong> +38 069 608 85 42</p>
+                        <p><strong>Email:</strong> <a href="mailto:tetiana.hapii.kb.2024@lpnu.ua">tetiana.hapii.kb.2024@lpnu.ua</a></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Мета</h2>
+            <p>Студентка спеціальності "Кібербезпека", яка прагне розвиватися в галузі інформаційних технологій. Активно вивчаю базові мови програмування та принципи мережевої безпеки. Шукаю можливості для практичного застосування знань та старту кар'єри в IT-секторі.</p>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <ul>
+                <li>
+                    <strong>Національний університет "Львівська політехніка"</strong><br>
+                    Спеціальність: Кібербезпека та захист інформації<br>
+                    <em>2024 — дотепер</em>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Технічні навички</h2>
+            <ul>
+                <li><strong>Мови програмування:</strong> C++, HTML</li>
+                <li><strong>Інструменти:</strong> Git (базові навички), робота з терміналом</li>
+                <li><strong>ОС:</strong> Windows, основи роботи в командному рядку</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Досвід роботи</h2>
+            <p>На даний момент досвід роботи відсутній. Зосереджена на академічному навчанні, виконанні лабораторних та практичних робіт у межах університету.</p>
+        </section>
+
+        <section>
+            <h2>Особисті якості</h2>
+            <ul>
+                <li>Аналітичне мислення</li>
+                <li>Відповідальність та пунктуальність</li>
+                <li>Висока здатність до навчання</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Відгуки (Дані з сервера)</h2>
+            <div id="comments-container">Завантаження відгуків...</div>
+        </section>
+
+        <section style="text-align: center; margin-top: 20px;">
+            <button id="open-modal">Залишити повідомлення</button>
+        </section>
+
+        <footer id="main-footer">
+            <p><small>Лабораторна робота №4 (JS & LocalStorage)</small></p>
+            <div id="storage-info" class="storage-box"></div>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content" style="text-align: left; max-width: 400px;">
+            <span class="close">&times;</span>
+            <h3 style="margin-top: 0;">Зворотній зв'язок</h3>
+            
+            <form action="https://formspree.io/f/mnjoyanz" method="POST">
+                <label style="display:block; margin-bottom: 5px;">Ім'я</label>
+                <input type="text" name="name" placeholder="Ім'я" required style="width: 100%; margin-bottom: 15px; padding: 8px; box-sizing: border-box;">
+                
+                <label style="display:block; margin-bottom: 5px;">Email</label>
+                <input type="email" name="email" placeholder="Email" required style="width: 100%; margin-bottom: 15px; padding: 8px; box-sizing: border-box;">
+                
+                <label style="display:block; margin-bottom: 5px;">Телефон</label>
+                <input type="tel" name="phone" placeholder="Телефон" style="width: 100%; margin-bottom: 15px; padding: 8px; box-sizing: border-box;">
+                
+                <label style="display:block; margin-bottom: 5px;">Ваше повідомлення</label>
+                <textarea name="message" placeholder="Ваше повідомлення" required style="width: 100%; margin-bottom: 15px; padding: 8px; box-sizing: border-box; height: 100px;"></textarea>
+                
+                <button type="submit" style="width: 120px; padding: 10px; background-color: #004a99; color: white; border: none; cursor: pointer;">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Перевірка фото
+        const img = document.getElementById('main-photo');
+        img.onerror = function() {
+            this.src = 'https://ui-avatars.com/api/?name=Tetiana+Hapii&background=0056b3&color=fff';
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
